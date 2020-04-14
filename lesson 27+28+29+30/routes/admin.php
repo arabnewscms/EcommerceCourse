@@ -2,7 +2,7 @@
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
-		Config::set('auth.defines', 'admin');
+		Config::set('auth.defines.guard', 'admin');
 		Route::get('login', 'AdminAuth@login');
 		Route::post('login', 'AdminAuth@dologin');
 		Route::get('forgot/password', 'AdminAuth@forgot_password');
